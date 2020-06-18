@@ -1,0 +1,125 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{vmargin}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\bibliographystyle{apalike} 
+\usepackage[numbered,framed]{matlab-prettifier}
+\usepackage{filecontents}
+
+\spanishdecimal{.}
+\begin{document}
+\begin{titlepage}
+
+
+
+
+\begin{center}
+\includegraphics[scale=.3]{escudo.png}}  \\[1 cm]
+\textbf{\LARGE UNIVERSIDAD POLITÉCNICA DE PACHUCA}\\[0.2cm]
+\vspace{30pt}
+\textbf{\large Maestría en Tecnologías de la Información y Comunicaciones}\\[1 cm]
+\end{center}
+\par
+\vspace{30pt}
+
+
+\begin{center}
+\text{\large Materia:   Proyecto de Tesis}\\
+\text{\large Actividad:   Citas}
+\end{center}
+
+
+\begin{center}
+\vspace{30pt}
+\textbf{\large Nombre del Alumno:}\\[0.1cm]
+\Large {Benjamin Oribe Mendieta} \\[0.1cm] 
+
+\textbf{\large Nombre del Profesor:}\\[0.1cm]
+\Large {Dra.Ocotlán Díaz Parra} \\[0.1cm] 
+
+\end{center}
+\end{titlepage}
+\section{Blockchain}
+
+Normalmente se considera a Blockchain como una sola tecnología, pero en \cite{halaburda2018blockchain} se advierte como características propias de la tecnología como la encriptación, el manejo de transacciones distribuido y los contratos inteligentes son tecnologías importantes por si mismas que pueden cambiar varias industrias.\\
+
+
+Actualmente se desarrollan varias implementaciones alternativas al método utilizado por Bitcoin para el manejo de inconsistencia por tolerancia Bizantina  como en \cite{10.1145/3152824.3152830} donde crearon un servicio con el sistema Hyperledger Fabric\cite{bessani2014state}.\\
+
+En \cite{puthal2018blockchain} presentan un análisis de las posibilidades de blockchain para solventar problemas de seguridad y validación de transacciones.\\
+
+\subsection{Seguridad}
+
+Blockchain no es inmune a ataques, en \cite{hasanova2019survey} y \cite{apostolaki2017hijacking}se muestran las vulnerabilidades de esta tecnología como el ataque de DDOS a Ethereum en 2016\cite{atzei2016survey}. En el trabajo de \cite{destefanis2018smart} se describe como el programar de manera insegura los \textit{smart contracts} de Etherewum(\cite{buterin2016ethereum}) llevo a un congelamiento de 500 Ethers por medio de la wallet \textit{Parity}\cite{Parity} en 2017.\\
+
+Los sistemas criptográficos de firma digital se consideran vulnerables ante ataques por métodos cuánticos, en \cite{li2018new} se presentan una opción por medio del algoritmo de Arboles Bonsai\cite{cash2010bonsai}  y el algoritmo de \textit{RandBasis} para\cite{sciabarra2013ayn} crear wallets no deterministas para aplicaciones de blockchain. \cite{xu2016blockchains} hace un listado de al menos 4 tipos de amenazas a los sistema blockchain.\\
+
+En \cite{gervais2016security} desarrollan un framework capaz de analizar la vulnerabilidad de varias plataformas blockchain a diferentes grupos de ataques, con interés en el ataque de Eclipse(\cite{wust2016ethereum}). \\
+
+En \cite{wust2016ethereum} se hace un análisis a los ataques por medio de Eclipse a la plataforma Ethereum y en \cite{nayak2016stubborn} se maneja el crecimiento de estos ataques en general y sobre el crecimiento de la minería no egoísta de cripto monedas.\\
+
+Las cripto monedas es uno de los mas populares sectores de implementación de blockchain, muchas nuevas se unen a bitcoin\cite{nakamoto2008bitcoin}, en \cite{chan2017statistical}, se hace un análisis las estadísticas principales de las principales monedas en el mercado. En \cite{kyriazis2019survey} se busca ver si el precio de las cripto monedas principales así como esta se relaciona con la eficiencia de cada una. Por su parte \cite{ivanov2018technical} genera una plataforma de comparación para analizar los aspectos técnicos de las plataformas principales de cripto monedas para determinar la mejor para resolver cada problema específico.\\
+
+
+
+\subsection{Mejoras}
+
+Existen muchas cripto monedas en el mercado y atrae a muchas organizaciones, en \cite{libra2019} Facebook presenta Libra, una cripto moneda para el pago de servicios que busca ser soportada por organizaciones gubernamentales y bancarias, en \cite{taskinsoy2019facebook} se intenta advertir si Libra puede cumplir la idea de una cripto moneda para las transacciones de todos los días.\\ 
+
+Aunque uno de los pilares de las plataformas Blockchain es la transparencia de las operaciones, también existen investigaciones como la de \cite{feng2019survey} donde analiza protección de la privacidad en sistemas Blockchain. En \cite{esposito2018blockchain} se analiza si Blockchain puede ser una opción para la privacidad en registros médicos compartidos. \cite{jiang2019ptas} analizan la privacidad de un sistema de llave publica para clientes livianos. En \cite{lemieux2016trusting}se advierte si la tecnología blockchain actual es capas de mantener un sistema de registro conmfiable usando la plataforma como ejemplo Bitcoin y Factom(\cite{snow2015factom}).\\ 
+
+La obtención del proof-of-work es uno de los pasos de Blockchain donde existe espacio para mejorar en  \cite{hazari2019parallel} presentan un método para hacer el proceso de minado de manera paralela. En \cite{kang2018incentivizing} se genera un sistema para la rápida propagación del consenso de nodos en sistemas basados en Proof-Stake(\cite{kiayias2017ouroboros}) utilizando un juego de Stackelberg(\cite{zhang2009stackelberg}) para maximizar la ganancia de los mineros. \\
+
+En \cite{saleh2020blockchain} se presenta un modelo económico basado en proof-of-stake donde se puede obtener el consenso de manera general al evitar que los "accionistas" retrasen el consenso. En \cite{liu2019fork} se busca crear un modelo consenso hibrido basado en el  Proof-of-activity  de \cite{bentov2014proof} y la implementación de \cite{pass2017hybrid}  que permite un modelo libre de \textit{forks}.\\
+
+También \cite{yoo2018promoting} advierten que la estrategia no cooperativa de Ethereum ayuda a que la generación de bloques vacíos (sin transacciones) sean mas comunes, lo cual reduce la velocidad de proceso de transacciones y proponen un sistema con una estrategia cooperativa para solucionar este problema.\\
+
+Existe un lado ecológico que se debe tomar en cuenta para los sistemas Blockchain,\cite{li2019energy}  hace el análisis de la energía requerida en un año para minar la cripto moneda \textit{Monero} \cite{Monero}. Por su parte \cite{krause2018quantification} analiza los factores que influyen en marca de carbono de la minería de cripto monedas.\\
+
+
+\subsection{Aplicaciones}
+
+
+Blockchain ha atraído a varios mercados, de esta manera, \cite{cai2018decentralized} han hecho un survey de las posibles aplicaciones que se verían beneficiadas del uso de esta arquitectura/plataforma. Así mismo \cite{singh2020blockchain} analizan las posibilidades y retos inherentes en formalizar los contratos inteligentes por medio de blockchain.\\
+ 
+Blockchain y su implementación es de mucha importancia para las aplicaciones de la industria, en \cite{mohamed2019applying} se muestra un listado de los puntos en los cuales la tecnología blockchain tendría un impacto para la implementación de la industria 4.0 (\cite{lasi2014industry}).\\
+
+En \cite{yi2019securing} se busca implementar un sistema seguro para sistemas de voto electrónico.\\
+
+La implementación de Internet of Things requiere de unión de varias tecnologías para poder implementarse cabalmente, en \cite{dai2019blockchain} y \cite{wang2019survey} se hace un listado de como blockchain puede ayudar en este proceso. En el proyecto de \cite{alphand2018iotchain} se propone un concepto IoTChain, una combinación de la arquitectura OSCAR(\cite{vuvcinic2015oscar}) y el framework de autorización ACE (\cite{seitz2017authentication} para manejo de clientes de IOT entre nodos finales.\\
+
+Para reducir la letencia ente dispositivos parta IOT en \cite{sharma2018blockchain} proponen una arquitectura híbrida por software que maneje secciones centralizadas y descentralizadas para su implementación sen ciudades inteligentes.\\
+
+En el trabajo de \cite{khan2018iot} se analizan los aspectos a tomar en cuenta a nivel de seguridad de implementar sistemas basados en Blockchain para IOT.
+
+
+En \cite{motohashi2019secure} analiza y diseña un sistema para manejar sistema de Salud Móvil (mHealth) basado en blockchain. En el mismo ámbito \cite{cao2019cloud} diseñan un sistema basado en la nube para manejo electrónico de registros médicos electrónicos.\\
+
+Dentro del survey de \cite{rabah2018convergence} se analiza los puntos en que tecnologías como blockchain convergen cono IoT, el análisis de Big Data y la Inteligencia Artificial.
+
+En campo de la robótica \cite{ferrer2018blockchain} presenta como blockchain puede solventar problemas en los campos de seguridad, toma de desiciones, diferenciación de comportamientos y modelos de negocios para el campo de la robótica de enjambres.\\
+
+\section{Hashchain}
+
+Las funciones hash para el manejo de firmas digitales, y es necesario tener implementaciones de las mas conocidas para varios dispositivos. \cite{osvik2012fast} presentan un listado de eficiencia de las implementaciones de funciones hash en para sistemas embebidos, mientras \cite{kyu2002efficient} desarrollan una función hash implementación para procesadores IPSEC, \cite{cheng2018efficient} desarrollan una implementación de SHA-512 para procesadores ARV, comunes en las tarjetas arduino. En \cite{kim2018optimized} se desarrolla una implementación de SHA-3 para sistemas en un chip (SOC) para procesadores ARM.\\
+
+
+
+En \cite{wang2019message} se desarrolla un protocolo de identificación de mensajes por medio de una función hash cuántica, basada en quantum walks (\cite{li2013discrete}).\\
+
+El IOT también busca en la firma por medio de hash chains(\cite{lamport1981password} una manera segura de firmar información, en \cite{alshahrani2019secure} crean un a identidad temporal basado en hash chain para identificación mutua y control automatizado para hogares inteligentes.\\
+
+En \cite{jeong2020multi} se desarrolla un sistema para recuperación de información multimedia para sistema distribuidos para IoT basado en hash chains.\\
+
+En \cite{tariq2018detection} se utilizan hash chains para analizar la entrada de datos falsos en redes de sensores inalámbricos tomando en cuanta sus limitadas capacidades de procesamiento. A si mismo |cite{lu2018research} utiliza hash chains para resolver el problema de falta de autentificación en el modo de trasnmisión de las redes DNP3(\cite{clarke2004practical}). \\
+
+Una de las aplicaciones mas comunes de hash chains es la generación de passwords temporales como se muestras en la implementación de \cite{park2018one}.\\
+
+
+
+\bibliography{referencias}
+\end{document}

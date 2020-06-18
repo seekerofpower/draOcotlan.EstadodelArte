@@ -1,0 +1,188 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{vmargin}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{pstricks,pst-node}
+%\usepackage{apacite}
+\bibliographystyle{apalike}
+\usepackage{makeidx}
+\spanishdecimal{.}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{bigfoot} % to allow verbatim in footnote
+\usepackage[numbered,framed]{matlab-prettifier}
+\usepackage{filecontents}
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\includegraphics[scale=.5]{escudo.png}}  \\[1 cm]
+\textbf{\LARGE UNIVERSIDAD POLITÉCNICA DE PACHUCA}\\[0.2cm]
+\vspace{30pt}
+\textbf{\large Maestría en Tecnologías de la Información y Comunicaciones}\\[1 cm]
+\end{center}
+\par
+\vspace{30pt}
+
+
+\begin{center}
+\text{\large Materia:   Proyecto de Tesis}\\
+\text{\large Actividad:   Citas}
+\end{center}
+
+
+\begin{center}
+\vspace{30pt}
+\textbf{\large Nombre del Alumno:}\\[0.1cm]
+\Large {Ignacia Nataly Lucio Morales} \\[0.1cm] 
+
+\textbf{\large Nombre del Profesor:}\\[0.1cm]
+\Large {Dra.Ocotlán Díaz Parra} \\[0.1cm] 
+
+\end{center}
+\end{titlepage}
+
+\begin{titlepage}
+\end{titlepage}
+
+
+A partir de la idea básica de Chaum \cite{chaum1981untraceable} sobre las técnicas de comunicación anónima a principios de 1981, se han diseñado varios sistemas. \\
+
+Los sistemas anónimos actuales pueden clasificarse en dos categorías: técnicas basadas en mensajes (de alta latencia) y técnicas basadas en flujos (de baja latencia) \cite{wang2011potential}. \\
+
+Onion Router (Tor), el Invisible Internet Project (I2P) y JonDonym son las más populares \cite{montieri2017anonymity}.\\
+
+Tor es un servicio de comunicación anónima basado en circuitos de baja latencia \cite{dingledine2004tor}.\\
+
+Tor utiliza el enrutamiendo de cebolla que tiene como objetivo hacer más difícil el análisis del tráfico de datos para un adversario \cite{danezis2008survey}. \\
+
+Se estima que Tor cuenta con un promedio de 6 mil nodos y 2 millones de usuarios al día \cite{Tor}.\\
+
+I2P también es una red de comunicación anónima de baja latencia pero a diferencias de Tor, esta red esta basada en mensajes y en la comunicación entre pares \cite{conrad2014survey}. \\
+
+I2P presenta una capa simple que las aplicaciones pueden usar para enviarse mensajes entre si de forma anónima y segura \cite{I2P}.\\
+
+
+I2P utiliza el enrutamiento de ajo o garlic routing el cual se inspiró en el enrutamiento de la cebolla \cite{zantout2011i2p}.\\
+
+JonDo(JonDonym) es un cliente proxy, el cual se encarga de reenviar el tráfico de las aplicaciones de Internet encriptadas en cascadas Mix, por lo que ocultará la dirección IP \cite{JonDonym}.\\
+
+Además de Tor, I2P y JonDonym existen otros sistemas anónimos como: Freenet \cite{Freenetproject}, MorphMix \cite{rennhard2002introducing} , Tarzan \cite{freedman2002tarzan}, MUTE \cite{Mute}, AntsP2P \cite{AntsP2P}, Mixminion \cite{Mixminion}, Mixmaster \cite{Mixmaster}.\\
+
+Los sistemas criptográficos de llave pública surgen como una solución a los problemas que presentan los sistemas de llave simétrica principalmente la autenticación y la distribución de llaves \cite{alese2012comparative}.\\
+
+Fueron propuestos e implementados otros protocolos de llave pública \cite{rabah2005theory}.\\
+
+ Sin embargo, los avances tecnológicos han incrementado considerablemente la capacidad de procesamiento de las computadoras y ha reducido el esfuerzo y el tiempo necesarios para resolver dichos problemas al menos hasta ciertos límites \cite{berta2003implementing}. Por lo tanto tales cripto-sistemas han tenido que aumentar el tamaño de sus llaves para mantener su nivel de seguridad.\\
+ 
+ Whitfield Diffie, Martin Hellman e independientemente Ralph Merkle establecieron el concepto de criptografía de llave pública \cite{diffie1976new,merkle1978secure}.\\
+ 
+El método consta de dos llaves, una pública que permite descifrar el secreto compartido y una privada que permite cifrarlo \cite{nath2010symmetric}.\\
+
+
+ El generador $g$, es la raíz primitiva de $p$ y debe ser tal que $1<g<p$, actualmente no se requiere que  sea primitivo \cite{schneier2007applied}.\\
+ 
+El protocolo DF es susceptible a un ataque de Hombre de en Medio (MITM) \cite{diffie1976new}.\\
+
+El ataque consiste en alterar los datos que están intercambiando Alice y Bob \cite{roy2016brief} porque el protocolo es incapaz de autenticar a los usuarios.\\
+
+En 2015 fue publicada una nueva forma de ataque, Logjam \cite{adrian2015imperfect}, que permite a un tercero interceptar datos debido a una falla en el protocolo TLS (Transport Layer Security).\\
+
+RSA es un sistema de criptografía de llave pública utilizado ampliamente para la autenticación de usuarios mediante certificados digitales, creado por Ron Rivest, Adi Shamir y Leonard Adleman en 1977 en el Instituto Tecnológico de Massachusetts \cite{rivest1978method}. El sistema se fundamenta en crear una llave pública en base a dos números primos grandes, su fortaleza radica en la dificultad del problema de la factorización de números enteros \cite{brent2000recent}.\\
+
+
+Una Criba Cuadrática Polinomial Múltiple (MPQS) \cite{silverman1987multiple}, puede factorizar un valor de $n$ de 129 o 256 bits en menos de 2 segundos en un equipo de cómputo de escritorio.\\
+
+La resolución del problema de la factorización de números enteros por medio del algoritmo de Shor \cite{shor1994algorithms}.\\
+
+También existen métodos como el ataque de cifrado cíclico \cite{hecht2014aportes}, que es capaz de descifrar un criptograma RSA utilizando la información pública de manera rápida en tamaños de clave de hasta 9 bits en equipos de escritorio.\\
+
+En 1985, Taher ElGamal, propuso un sistema de llave pública y un esquema de firma electrónica \cite{elgamal1985public}.\\
+
+La criptografía usada en Diffie Hellman también es vulnerable, al menos en teoría, a los analizadores cuánticos que son capaces de ejecutar el algoritmo de Shor \cite{shor1999polynomial}.\\
+
+Se están desarrollando algunos métodos para proteger las comunicaciones en la era cuántica, a estos métodos se les llama post-cuánticos \cite{ding2005rainbow,bernstein2015sphincs,alkim2016post,overbeck2009code}.\\
+
+El Artículo 19 de la Declaración Universal de Derechos Humanos establece que todo individuo tiene derecho a la libertad de opinión y de expresión; este derecho incluye el no ser molestado a causa de sus opiniones, el de investigar y recibir información y el de difundirlas sin limitación de fronteras por cualquier medio de expresión. Otro artículo, el 20, establece que toda persona tiene derecho a la libertad de reunión y de asociación pacíficas \cite{de2003declaracion}.\\
+
+En China se han censurado contenidos en Internet que incluyen las publicaciones relativas a derechos humanos. Temas de religión en Arabia Saudita, la Unión de Emiratos Árabes e Irán. La pornografía en Singapur y Birmania. Otros contenidos que son censurados en Internet incluyen temas con contenido militar, educación sexual, drogas y alcohol, música, así como sitios orientados a temas de homosexualidad, etc. De 40 países estudiados en 26 de ellos se aplica alguna forma de censura \cite{opennet2006opennet}.\\
+
+
+Se estima que Tor cuenta con un promedio de 6 mil nodos y 2 millones de usuarios al día \cite{Tororg}. México, con un promedio de 15 mil usuarios, es el tercer país en América Latina con más usuarios de la red después de Brasil y Venezuela. Sin embargo la participación en la operación de los nodos de la red Tor en nuestra región, América Latina y el Caribe, es del 1.53\% \cite{Tormex}.\\
+
+ Para la construcción de circuitos OP entre circuitos OR la comunicación es negociada a través de una clave simétrica utilizando el algoritmo de cifrado Diffie Hellman \cite{syverson2004tor}.\\
+ 
+ Las firmas usan un algoritmo DSA de 1024 bits con una semilla de 320 bits y las conexiones TCP utilizan Diffie-Hellman de 2048 bits \cite{jrandom2010i2p}.\\
+ 
+En el modo CBC (cipher-block chaining) a cada bloque de texto se le aplica una operación XOR con el bloque previo ya cifrado. De este modo, cada bloque cifrado depende de todos los bloques de texto claros usados hasta ese punto. Además, para hacer cada mensaje único se debe usar un vector de inicialización en el primer bloque \cite{dworkin2001recommendation}.\\
+
+Es un sistema de red P2P. Este software permite publicar y compartir información en internet sin miedo a la censura. Es un software descentralizado y mantiene el anonimato de los editores y consumidores \cite{Freenetproject}.\\
+
+Este sistema hace posible navegar en Internet de forma anónima. En esta red los usuarios no están conectados directamente con el servidor web pero están conectados utilizando cifrado a través de diversos intermediarios llamados ``mixes''. Esta es una opción para quién no quiera utilizar un servicio de anonimato como lo es Tor y no requiera un anonimato significativo \cite{JonDonym}.\\
+
+Es una red entre pares mixta basada en circuitos. En esta red cada cliente es parte de la infraestructura de la red mixta . Es un software completamente especificado y escalable, protege de observadores reales y ofrece buen desempeño. MorphMix es una red de baja latencia que permite acceso a internet a los usuarios de manera anónima \cite{rennhard2002introducing}.\\
+
+Es una red P2P superpuesta descentralizada. Esta red provee una gran escalabilidad, manejabilidad y las fallas son controlables. Es como una red mixta con múltiples saltos de ruta y encriptación capa por capa. Proporciona anonimato a los clientes o servidores sin participar. Esto es realizado por un NAT (Network Address Translation o Traductor de Direcciones de Red) para puentear entre Internet y los usuarios de Tarzan \cite{freedman2002tarzan}.\\
+
+Es una red P2P a través del cual se pueden compartir archivos de forma anónima. El cliente de MUTE es un software de libre acceso, la distribución es de dominio público e incluye soporte para varios sistemas operativos \cite{Mute}.\\
+
+Es una aplicación anónima distribuida por pares. El anonimato de los usuarios es logrado por redes de enrutamiento que ocultan la ubicación física (IP) de cada relé o cliente, de otros que forman parte del sistema. Encripta todo lo que envía y/o recibe \cite{AntsP2P}.\\
+
+Es un protocolo de comunicación anónima que está diseñado para enviar y recibir mensajes de correo electrónico, en el cual los voluntarios ejecutan servidores conocidos como ``mixes'' o ``nodos'' que reciben los mensajes y los descifran, posteriormente los transmiten a su destino final. Cada correo electrónico pasa a través de diferentes nodos/mixes, así que cada nodo puede ligar los mensajes de los remitentes con sus destinatarios. esta versión fue liberada en Febrero de 2009 y sigue vigente \cite{Mixminion}.\\
+
+Es un remailer (servidor que recibe correos electrónicos en un formato especial) anónimo tipo II. Es una idea de las redes mixtas o network mix de David Chaum. Envía mensajes en tamaño de paquetes fijos y los reordena. Esto evita que cualquiera pueda observar el envío y recepción de mensajes que entran y salen de los remailers para rastrearlos \cite{Mixmaster}.\\
+
+Contiene la lista de todos los ORs disponibles \cite{mccoy2008shining}.\\
+
+El cliente de Tor usa un algoritmo para la selección del ruta para seleccionar los ORs para la construcción del circuito \cite{panchenko2012improving}.\\
+
+Un adversario que compromete la clave privada del Servicio Oculto puede montar un ataque de hombre en medio de los servicios ocultos. Una característica de este ataque es que el adversario no necesita estar en la ruta de comunicación entre el cliente y el servidor \cite{sanatinia2017off}.\\
+
+
+Investigaciones anteriores han confirmado el ataque a los servicios ocultos \cite{noubir2016honey}, intentos de este tipo por parte de diferentes entidades con diverso nivel de sofisticación y persistencia.\\
+
+
+Los nodos de salida son la interfaz de la red Tor con Internet. Sea lo que sea que hagan los usuarios de Tor, dondequiera que se conecten, ya sea legal o ilegal, los relés de salida llevan esos mensajes a su destino final \cite{ccalicskan2015technical}.\\
+
+Para el propio software Tor, ejecutar un relé de salida Tor requiere algunos cambios de configuración en el paquete de software Tor, como Vidalia \cite{ccalicskan2015technical}. \\
+
+
+Es fácil que los nodos de salida fisgoneen y manipulen el tráfico anónimo de la red y como todos los relés están dirigidos por voluntarios independientes, no todos son inocuos (inocentes) \cite{winter2014spoiled}.\\
+
+Los circuitos Tor de un usuario, que son túneles cifrados, terminan en los relés de salida y desde allí, el tráfico del usuario procede a viajar por la Internet abierta hasta su destino final. Dado que los relés de salida pueden ver el tráfico a medida que lo envía un usuario Tor, su función es particularmente delicada en comparación con los guardias de entrada y los relés intermedios; sobre todo porque el tráfico suele carecer de cifrado de extremo a extremo. Por su diseño, los relés de salida actúan como un "hombre en el medio" (MitM) entre un usuario y su destino \cite{winter2014spoiled}.\\
+
+Las redes de anonimato han surgido como una solución para permitir a las personas ocultar sus identidades en línea. Esto se hace proporcionando la posibilidad de desvincular la dirección IP de un usuario, su huella digital y sus actividades en línea \cite{alsabah2016performance}.\\
+
+La red Tor puede ser extendida por cualquier anfitrión que desee formar parte de la red. Aunque esta característica hace de Tor una red extremadamente escalable, también la hace vulnerable por diseño a ataques de tipo "hombre en el medio", especialmente en el caso de que un usuario malicioso controle el nodo de salida de la red y las comunicaciones con el servidor no estén encriptadas \cite{cambiaso2019darknet}.\\
+
+Un ejemplo de configuración errónea o de comportamiento malicioso real es el de los nodos de salida que realizan ataques man in the middle a las conexiones https salientes, realizan la eliminación de SSL (es decir, sustituyendo los enlaces https:// por enlaces http://), o realizan ataques man in the middle a otros protocolos como ssh \cite{Tor-badRelays}.\\
+
+Una solución obvia a estos problemas podría implicar el envío de tráfico cifrado mediante SSL a través de relés. Sin embargo, los operadores de retransmisión malintencionados pueden emplear ataques de tipo hombre en el medio y espiar el tráfico incluso de sesiones cifradas con SSL, y se han observado ataques de este tipo en la red Tor \cite{chakravarty2015detection}.\\
+
+
+El ataque del Hombre en el Medio (MITM) es una de las principales técnicas empleadas en el hacking informático. El ataque MITM puede invocar con éxito ataques como la denegación de servicio (DoS), la suplantación de DNS y el robo de puertos. Los ataques MITM de todo tipo tienen muchas consecuencias sorprendentes para los usuarios, como el robo del nombre de usuario de la cuenta en línea, la contraseña, el robo de la identificación ftp local, la sesión ssh o telnet, etc \cite{nayak2010different}.
+
+
+\nocite{chaum1981untraceable,wang2011potential,Tor,I2P,zantout2011i2p,Freenetproject,dingledine2004tor,danezis2008survey,
+conrad2014survey,montieri2017anonymity,JonDonym, freedman2002tarzan, rennhard2002introducing,Mixmaster,AntsP2P,
+Mixminion, alese2012comparative, rabah2005theory, berta2003implementing,diffie1976new,merkle1978secure,nath2010symmetric,schneier2007applied,adrian2015imperfect,rivest1978method,
+brent2000recent,silverman1987multiple,shor1994algorithms,hecht2014aportes,elgamal1985public,shor1999polynomial,ding2005rainbow,
+bernstein2015sphincs,alkim2016post,overbeck2009code,de2003declaracion,opennet2006opennet,syverson2004tor,jrandom2010i2p,
+mccoy2008shining,panchenko2012improving,sanatinia2017off,noubir2016honey,ccalicskan2015technical,winter2014spoiled,
+alsabah2016performance,cambiaso2019darknet,chakravarty2015detection,nayak2010different,Mute}
+
+
+
+
+\bibliography{referencias}
+
+
+
+
+\end{document}
